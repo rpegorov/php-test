@@ -12,8 +12,8 @@ class Notification {
         $this->smsService = $smsService;
     }
 
-    public function notify(string $message) {
-        $this->smsService->send($this->smsTo, $message);
+    public function notify(string $message, string $smsTo) {
+        $this->smsService->send($smsTo, $message);
     }
 }
 ?>
